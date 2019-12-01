@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/WikleWang/SpringCloud # 配置git仓库的地址
+          search-paths: config-repo # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: wangwei@amt.com.cn
+          password: Ww920109@qqcom
+server:
+  port: 12000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
